@@ -1,6 +1,7 @@
-const textInput = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const textInput = document.querySelector("#name-input"); // знаходжу сам інпут 
+const output = document.querySelector("#name-output"); // знаходжу текст яких повинен змінюватись на текст яких знаходиться в інпут
 
-textInput.addEventListener("input", (sense) => {
+textInput.addEventListener("input", (sense) => { // додаю інпуту івент 
     output.textContent = sense.currentTarget.value ? sense.currentTarget.value : "Anonymous";
-});
+}); // тексту я кажу що за допомогою тернарного оператора ти виводиш текст яких знаходиться в інпуті,
+    // якщо інпут порожній або з нього все видалили, тоді "Anonymous";
