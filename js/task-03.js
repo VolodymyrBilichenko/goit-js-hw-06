@@ -12,3 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+
+
+
+
+const ggg = "Я у мамы програмист";
+console.log(`Кто ты воин - ${ggg}`);
