@@ -14,9 +14,16 @@ const images = [
 ];
 
 
+const galList = document.querySelector('.gallery'); // отримую доступ до списку ul
+galList.style.display = "flex"; // додаю стилі для item
+galList.style.listStyleType = "none"; 
+galList.style.alignItems = "center";
+galList.style.gap = "50px";
 
 
+const imgList = document.createElement('img'); // створюю картинки в item
+const imagesArr = images.map(imgArr =>         // перибираю масив об'єктів
+  `<li><img src = ${imgArr.url} alt = ${imgArr.alt} width = 100px></img></li>` // за допомогою шаблоного рядка вивожу значення об'єктів
+).join(' ') // потрібно перечитати 
 
-
-const ggg = "Я у мамы програмист";
-console.log(`Кто ты воин - ${ggg}`);
+galList.insertAdjacentHTML('beforeend', imagesArr); // в список ul додаю весь свій контент в середини в кінець 

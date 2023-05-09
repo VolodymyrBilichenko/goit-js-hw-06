@@ -1,9 +1,3 @@
-// План дій
-// 1. Отримати список елементів
-// 2. Отримати кількість елементів
-// 3.
-
-
 
 const category = document.querySelector('#categories');
 const categoryList = category.querySelectorAll('.item');
