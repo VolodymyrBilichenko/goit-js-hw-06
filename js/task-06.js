@@ -1,17 +1,14 @@
-const inputEl = document.querySelector('#validation-input');
-inputEl.style.outline = "none";
-const inputElLength = Number(inputEl.getAttribute('data-length'));
+const inp = document.getElementById("validation-input"); // знаходжу сам input
 
-inputEl.addEventListener('blur', event => {
-  if (event.target.value.length === inputElLength) {
-    inputEl.classList.add('valid');
-    if (inputEl.classList.contains('invalid')) {
-      inputEl.classList.remove('invalid');
-    }
-  } else {
-    inputEl.classList.add('invalid');
-  }
-});
+inp.addEventListener("blur", () => { // додаю івент на input, та створюю функцію в якій все буде виконуватися
+    const inpLength = inp.dataset.length; // знаходжу обмеження на кількість символів в input
+    const inpValue = inp.value; // знаходжу 
 
-
-
+    if (inpValue.length === parseInt(inpLength)) { // роблю перевірку на кількість символів
+        inp.classList.add("valid")
+        inp.classList.remove("invalid")
+    } else {
+        inp.classList.add("invalid")
+        inp.classList.remove("valid")
+    };
+})

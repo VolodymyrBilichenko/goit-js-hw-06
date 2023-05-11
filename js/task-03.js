@@ -26,4 +26,4 @@ const imagesArr = images.map(imgArr =>         // перибираю масив 
   `<li><img src = ${imgArr.url} alt = ${imgArr.alt} width = 300px></img></li>` // за допомогою шаблоного рядка вивожу значення об'єктів
 ).join(' ') // потрібно перечитати 
 
-galList.insertAdjacentHTML('beforeend', imagesArr); // в список ul додаю весь свій контент в середини в кінець 
+galList.insertAdjacentHTML('beforeend', imagesArr); // в список ul додаю весь свій контент в середину в кінець 
