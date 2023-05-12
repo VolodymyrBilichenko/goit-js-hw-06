@@ -4,12 +4,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const btnEL = document.querySelector(".change-color");
-const spanEL = document.querySelector(".color");
+const btnColor = document.querySelector(".change-color"); // добираюсь до кнопки
+const spanColor = document.querySelector(".color"); // добираюсь до спана
 
-btnEL.addEventListener("click", () => {
+btnColor.addEventListener("click", () => { // на кнопку вішаю івент(клік)
 
-  document.body.style.backgroundColor = getRandomHexColor();
-  spanEL.textContent = getRandomHexColor();
-
+  document.body.style.backgroundColor = getRandomHexColor(); //кажу що потрібно змінити стиль бекграунда на рандомний 
+  spanColor.textContent = document.body.style.backgroundColor; // кажу щоб текст також мінявся на колір який змінюється
 });
