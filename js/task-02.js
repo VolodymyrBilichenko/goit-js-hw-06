@@ -44,3 +44,15 @@ recept.prepend(...ingrArr);
 
 
 
+// ! знайти шаг між числами массиву 
+
+// const array = [2, 4, 7, 4, 11, 7];
+// // const array = [2, 4, 7, 9, 11, 14];
+
+// const step = [];
+
+// for (let i = 0; i < array.length - 1; i += 1){
+//   const currentStep = array[i + 1] - array[i];
+//   step.push(currentStep);
+// }
+// console.log(step);
