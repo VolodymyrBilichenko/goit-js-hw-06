@@ -23,6 +23,27 @@
 
 
 
+// const ingredients = [
+//   'Potatoes',
+//   'Mushrooms',
+//   'Garlic',
+//   'Tomatos',
+//   'Herbs',
+//   'Condiments',
+// ];
+
+// const recept = document.querySelector("#ingredients");
+
+// const ingrArr = ingredients.map(item => {
+//   const receptLi = document.createElement('li');
+//   receptLi.classList.add("item");
+//   receptLi.textContent = item;
+//   return receptLi;
+// });
+// recept.prepend(...ingrArr);
+
+
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -32,19 +53,16 @@ const ingredients = [
   'Condiments',
 ];
 
-const recept = document.querySelector("#ingredients");
+const list = document.querySelector("#ingredients");
 
-const ingrArr = ingredients.map(item => {
-  const receptLi = document.createElement('li');
-  receptLi.classList.add("item");
-  receptLi.textContent = item;
-  return receptLi;
+const ingrList = ingredients.map(item => {
+  const listLi = document.createElement(`li`);
+  listLi.classList.add('item');
+  listLi.textContent = item;
+  return listLi;
 });
-recept.prepend(...ingrArr);
 
-
-
-
+list.prepend(...ingrList);
 
 
 

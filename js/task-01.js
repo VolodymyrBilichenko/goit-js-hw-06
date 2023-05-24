@@ -28,18 +28,34 @@
 
 
 
+// const refs = {
+//     categor: document.querySelector("#categories").children,
+//     categorLi: document.querySelectorAll(".item")
+// }
+
+// console.log(`Number of categories: ${refs.categor.length}`);
+// refs.categorLi.forEach(itemEl => {
+//     const firstCategor = itemEl.firstElementChild.textContent;
+//     console.log(`Category: ${firstCategor}`);
+
+//     const lastCategor = itemEl.lastElementChild.children;
+//     console.log(`Elements: ${lastCategor.length}`);
+// });
+
+
+
+
+
+
 const refs = {
-    categor: document.querySelector("#categories").children,
-    categorLi: document.querySelectorAll(".item")
-}
+    listLi: document.querySelectorAll(".item"),
+} 
+console.log(`Number of categories: ${refs.listLi.length}`);
 
-console.log(`Number of categories: ${refs.categor.length}`);
-refs.categorLi.forEach(itemEl => {
-    const firstCategor = itemEl.firstElementChild.textContent;
-    console.log(`Category: ${firstCategor}`);
-
-    const lastCategor = itemEl.lastElementChild.children;
-    console.log(`Elements: ${lastCategor.length}`);
+refs.listLi.forEach(item => {
+    const liTitle = item.querySelector("h2").textContent;
+    console.log(`Category: ${liTitle}`);
+    
+    const elements = item.querySelectorAll("li").length;
+    console.log(`Elements: ${elements}`);
 });
-
-
