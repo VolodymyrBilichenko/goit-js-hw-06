@@ -81,7 +81,8 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const img = images.map(item => {
-  
-})
-// console.log(gallery);
+const img = images.map(({url, alt}) => 
+  `<li class="photo"><img src="${url}" alt="${alt}" width="500px" height="300px"></img></li>`
+).join("");
+
+gallery.insertAdjacentHTML("afterend", img);

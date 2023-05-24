@@ -14,14 +14,36 @@
 
 
 
-const minusBtn = document.querySelector(`[data-action="decrement"]`);
-const plusBtn = document.querySelector(`[data-action="increment"]`);
-const textValue = document.querySelector("#value");
+// const minusBtn = document.querySelector(`[data-action="decrement"]`);
+// const plusBtn = document.querySelector(`[data-action="increment"]`);
+// const textValue = document.querySelector("#value");
+// let counterValue = 0;
+
+// minusBtn.addEventListener("click", () => {
+//     textValue.textContent = counterValue -= 1;
+// });
+// plusBtn.addEventListener("click", () => {
+//     textValue.textContent = counterValue += 1;
+// });
+
+
+
+
+
+const txtValue = document.querySelector('#value');
+
 let counterValue = 0;
 
-minusBtn.addEventListener("click", () => {
-    textValue.textContent = counterValue -= 1;
-});
-plusBtn.addEventListener("click", () => {
-    textValue.textContent = counterValue += 1;
-});
+const counter = document.querySelector("#counter");
+
+counter.addEventListener("click", onClick);
+
+function onClick(evt) {
+    if (evt.target.nodeName !== "BUTTON") {
+        return;
+    } else if (evt.target.dataset.action === "increment") {
+        txtValue.textContent = counterValue += 1;
+    } else {
+        txtValue.textContent = counterValue -= 1;
+    }
+}

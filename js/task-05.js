@@ -8,8 +8,8 @@
 
 
 
-const textSpan = document.querySelector("#name-output");
-const textInp = document.querySelector("#name-input");
+// const textSpan = document.querySelector("#name-output");
+// const textInp = document.querySelector("#name-input");
 
 // 1 способ
 
@@ -19,6 +19,19 @@ const textInp = document.querySelector("#name-input");
 //     } textSpan.textContent = event.currentTarget.value;
 // })
 
-textInp.addEventListener("input", (event) => {
-    textSpan.textContent = !event.currentTarget.value.trim() ? "Anonymous" : event.currentTarget.value.trim(); 
-})
+// textInp.addEventListener("input", (event) => {
+//     textSpan.textContent = !event.currentTarget.value.trim() ? "Anonymous" : event.currentTarget.value.trim();
+// })
+
+
+
+
+
+const textInp = document.querySelector("#name-input");
+const nameOut = document.querySelector("#name-output");
+
+textInp.addEventListener("input", txt => {
+    if (txt.currentTarget.value.trim() === "") {
+        nameOut.textContent = "Anonymous";
+    } nameOut.textContent = txt.currentTarget.value;
+});
